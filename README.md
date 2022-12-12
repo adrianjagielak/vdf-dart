@@ -1,3 +1,5 @@
+[![pub package](https://img.shields.io/pub/v/vdf.svg)](https://pub.dartlang.org/packages/vdf)
+
 An encoder and decoder for Valve's [KeyValue format (VDF)](https://developer.valvesoftware.com/wiki/KeyValues).
 
 ## Usage
