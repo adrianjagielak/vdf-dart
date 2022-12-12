@@ -23,7 +23,7 @@ Map<String, dynamic> vdfDecode(String input) => vdf.decode(input);
 
 /// A Valve's [KeyValue format (VDF)](https://developer.valvesoftware.com/wiki/KeyValues)
 /// encoder and decoder.
-class VdfCodec extends Codec<Map<String, dynamic>, String > {
+class VdfCodec extends Codec<Map<String, dynamic>, String> {
   const VdfCodec();
 
   @override

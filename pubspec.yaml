@@ -1,5 +1,5 @@
 name: vdf
-version: 1.0.0
+version: 1.0.1
 description: "An encoder and decoder for Valve's KeyValue format (VDF)."
 repository: https://github.com/adrianjagielak/vdf-dart
 
