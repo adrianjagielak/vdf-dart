@@ -1,0 +1,7 @@
+name: vdf
+version: 1.0.0
+description: "An encoder and decoder for Valve's KeyValue format (VDF)."
+repository: https://github.com/adrianjagielak/vdf-dart
+
+environment:
+  sdk: '>=2.12.0 <3.0.0'
