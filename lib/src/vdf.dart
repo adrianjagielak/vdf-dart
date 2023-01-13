@@ -10,14 +10,14 @@ const VdfCodec vdf = VdfCodec();
 /// Encodes [input] using Valve's [KeyValue format (VDF)](https://developer.valvesoftware.com/wiki/KeyValues)
 /// encoding.
 ///
-/// Shorthand for `vdf.encode(bytes)`. Useful if a local variable shadows
+/// Shorthand for `vdf.encode(input)`. Useful if a local variable shadows
 /// the global [vdf] constant.
 String vdfEncode(Map<String, dynamic> input) => vdf.encode(input);
 
 /// Decodes Valve's [KeyValue format (VDF)](https://developer.valvesoftware.com/wiki/KeyValues)
 /// encoded string.
 ///
-/// Shorthand for `vdf.decode(bytes)`. Useful if a local variable shadows the
+/// Shorthand for `vdf.decode(input)`. Useful if a local variable shadows the
 /// global [vdf] constant.
 Map<String, dynamic> vdfDecode(String input) => vdf.decode(input);
 
