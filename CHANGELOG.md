@@ -1,3 +1,7 @@
+## 1.0.4
+
+- Update README.
+
 ## 1.0.3
 
 - Fix typo in documentation.
