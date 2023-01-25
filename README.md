@@ -4,36 +4,34 @@ An encoder and decoder for Valve's [KeyValue format (VDF)](https://developer.val
 
 ## Usage
 
+A [VdfCodec](https://pub.dev/documentation/vdf/latest/vdf/VdfCodec-class.html) encodes input json using Valve's [KeyValue format (VDF)](https://developer.valvesoftware.com/wiki/KeyValues) and decodes KeyValue string to json.
+
+The [vdf](https://pub.dev/documentation/vdf/latest/vdf/vdf-constant.html) is the default implementation of [VdfCodec](https://pub.dev/documentation/vdf/latest/vdf/VdfCodec-class.html).
+
+Example:
+
 ```dart
-var decoded1 = vdf.decode(r'''
+var encoded = vdf.encode({"sampleData":{"foo":"bar"}});
+
+var decoded = vdf.decode(r'''
 "sampleData"
 {
 	"foo"		"bar"
 }
 ''');
-print(decoded1);
-// {"sampleData":{"foo":"bar"}}
-
-var decoded2 = vdfDecode(r'''
-"sampleData"
-{
-	"foo"		"bar"
-}
-''');
-print(decoded2);
-// {"sampleData":{"foo":"bar"}}
-
-var encoded1 = vdf.encode({"sampleData":{"foo":"bar"}});
-print(encoded1);
-// "sampleData"
-//{
-//	"foo"		"bar"
-//}
-
-var encoded2 = vdfEncode({"sampleData":{"foo":"bar"}});
-print(encoded2);
-// "sampleData"
-//{
-//	"foo"		"bar"
-//}
 ```
+
+You can use shorthands [vdfEncode](https://pub.dev/documentation/vdf/latest/vdf/vdfEncode.html) and [vdfDecode](https://pub.dev/documentation/vdf/latest/vdf/vdfDecode.html). Useful if a local variable shadows the global [vdf](https://pub.dev/documentation/vdf/latest/vdf/vdf-constant.html) constant:
+
+```dart
+var encoded = vdfEncode({"sampleData":{"foo":"bar"}});
+
+var decoded = vdfDecode(r'''
+"sampleData"
+{
+	"foo"		"bar"
+}
+''');
+```
+
+For more information, see also [VdfEncoder](https://pub.dev/documentation/vdf/latest/vdf/VdfEncoder-class.html) and [VdfDecoder](https://pub.dev/documentation/vdf/latest/vdf/VdfDecoder-class.html).
