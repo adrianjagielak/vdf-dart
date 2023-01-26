@@ -127,7 +127,7 @@ class VdfDecoder extends Converter<String, Map<String, dynamic>> {
         continue;
       }
       if (expect) {
-        throw Exception('VDF | Parse: Invalid syntax on line ${i + 1}');
+        throw FormatException('Invalid syntax on line ${i + 1}.');
       }
       if (line[0] == '}') {
         stack.removeLast();
@@ -137,7 +137,7 @@ class VdfDecoder extends Converter<String, Map<String, dynamic>> {
       while (true) {
         var m = regex.firstMatch(line);
         if (m == null) {
-          throw Exception('VDF | Parse: Invalid syntax on line ${i + 1}');
+          throw FormatException('Invalid syntax on line ${i + 1}.');
         }
         dynamic key = (m[2] != null) ? m[2] : m[3];
         dynamic val = (m[6] != null) ? m[6] : m[8];
@@ -177,7 +177,7 @@ class VdfDecoder extends Converter<String, Map<String, dynamic>> {
     }
 
     if (stack.length != 1) {
-      throw Exception('VDF | Parse: Open parentheses somewhere');
+      throw FormatException('Open parentheses somewhere.');
     }
 
     return object;

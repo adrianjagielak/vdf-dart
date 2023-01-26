@@ -1,10 +1,14 @@
+## 1.1.0
+
+- Changed exception type thrown in `VdfDecoder` from `Exception` to `FormatException`.
+
 ## 1.0.4
 
-- Update README.
+- Updated README.
 
 ## 1.0.3
 
-- Fix typo in documentation.
+- Fixed typo in documentation.
 
 ## 1.0.2
 
